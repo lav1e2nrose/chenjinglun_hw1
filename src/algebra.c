@@ -166,6 +166,13 @@ Matrix inv_matrix(Matrix a)
         return create_matrix(0, 0);
     }
 
+    if (det == 0)
+    {
+        printf("Error: The matrix is singular.\n");
+
+        return create_matrix(0, 0);
+    }
+
     Matrix result = create_matrix(n, n);
     for (i = 0; i < n; i++){
         for (j = 0; j < n; j++){
