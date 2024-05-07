@@ -155,20 +155,21 @@ double det_matrix(Matrix a)
 
 Matrix inv_matrix(Matrix a)
 {
-    int n = a.rows;
-    double det = det_matrix(a);
-    int i,j;
-
+    
     if (a.rows != a.cols)
     {
         printf("Error: The matrix must be a square matrix.\n");
 
         return create_matrix(0, 0);
     }
+    
+    int n = a.rows;
+    double det = det_matrix(a);
+    int i,j;
 
     if (det == 0)
     {
-        printf("Error: The matrix must be a square matrix.\n");
+        printf("Error: The matrix is singular.\n");
 
         return create_matrix(0, 0);
     }
