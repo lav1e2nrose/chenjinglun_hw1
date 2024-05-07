@@ -58,12 +58,12 @@ Matrix mul_matrix(Matrix a, Matrix b)
 {
     if (a.cols != b.rows)
     {
-        printf("Error: The number of columns of matrix a must be equal to the number of rows of matrix b.\n");
+        printf("Error: The number of cols of matrix a must be equal to the number of rows of matrix b.\n");
 
         return create_matrix(0, 0);
     }
 
-    Matrix result = create_matrix(a.rows, b.cols);
+     Matrix result = create_matrix(a.rows, b.cols);
 
     for (int i = 0; i < a.rows; i++)
     {
@@ -116,7 +116,7 @@ double det_matrix(Matrix a)
 
     if (a.rows != a.cols)
     {
-        printf("Error: The matrix must be square.\n");
+        printf("Error: The matrix must be a square matrix.\n");
 
         return 0;
     }
@@ -161,7 +161,7 @@ Matrix inv_matrix(Matrix a)
 
     if (a.rows != a.cols)
     {
-        printf("Error: The matrix must be square.\n");
+        printf("Error: The matrix must be a square matrix.\n");
 
         return create_matrix(0, 0);
     }
@@ -252,7 +252,7 @@ double trace_matrix(Matrix a)
 {
     if (a.rows != a.cols)
     {
-        printf("Error: The matrix must be square.\n");
+        printf("Error: The matrix must be a square matrix.\n");
 
         return 0;
     }
