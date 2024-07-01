@@ -97,7 +97,9 @@ int main()
                         scanf("%lf", &a.data[i][j]);
                     }
                 }
-                Matrix b = scale_matrix(a, 2.0);
+                double k;
+                scanf("%lf", &k);
+                Matrix b = scale_matrix(a, k);
                 print_matrix(b);
                 break;
             }
